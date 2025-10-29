@@ -26,7 +26,7 @@ function addition(num1, num2) {
 const result = addition(5, 5)
 // console.log("Result: ", result)
 
-function loginUserMessage(username){
+function loginUserMessage(username) {
     if (username === undefined) {
         console.log("Please enter a username")
         return
@@ -34,5 +34,40 @@ function loginUserMessage(username){
     return `${username} just logged in`
 }
 
-console.log(loginUserMessage("Sumit"))
-console.log(loginUserMessage())
+// console.log(loginUserMessage("Sumit"))
+// console.log(loginUserMessage())
+
+// part 2
+
+function calculateCartPrice(...num1) { // ... rest operator - it means n number of arguments maybe passed
+    return num1
+}
+
+// console.log(calculateCartPrice(2)) // when rest operator was not used
+// console.log(calculateCartPrice(200, 500, 300, 2000))
+
+const user = {
+    username: "Sumit",
+    price: 109
+}
+
+function handleObject(anyObject) {
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+}
+
+// NO typechecking done by JS, if the instead of price we write it prices, instead of errors, JS would run the code and log value of price as undefined
+
+// handleObject(user)
+// handleObject({
+//     username: "Sam",
+//     price: 390
+// })
+
+const myNewArray = [200, 499, 4893, 3434]
+
+function returnSecondValue(getArray) {
+    return getArray[1]
+}
+
+// console.log(returnSecondValue(myNewArray))
+console.log(returnSecondValue([345, 36463, 6363, 363]))
